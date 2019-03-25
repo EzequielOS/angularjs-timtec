@@ -101,6 +101,13 @@ Informações adicionais:
             </div>
         </form>
     </div>
+    <div class="well" ng-controller="previsaoTempoController">
+        <h3>Previsao do Tempo</h3>
+        <h3>{{tempo.name}}, MG</h3>
+        <h4>Local: {{tempo.name}}</h4>
+        <h4>Temperatura: {{tempo.main.temp}}</h4>
+        <h4>Min:{{tempo.main.temp_min}}C e Max: {{tempo.main.temp_max}}C</h4>
+    </div>
     <div class="container-fluid container-fixed-lg footer">
         <div class="copyright sm-text-center">
             <p class="small no-margin pull-left sm-pull-reset">
@@ -109,8 +116,10 @@ Informações adicionais:
         </div>
     </div>
     <script type="text/javascript" src="assets/js/libs/angular.js"></script>
+    <script type="text/javascript" src="assets/js/libs/ngResource.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/primeiroController.js"></script>
+     <script type="text/javascript" src="assets/js/previsaoTempoController.js"></script>
 </body>
 
 </html>
