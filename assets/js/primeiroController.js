@@ -3,7 +3,7 @@ angular.module('minhaApp').controller('primeiroController', function($scope){
     var nome = "ashuashu";
 
     $scope.iniciado = true;
-    $scope.alunos = ['Aluno 1', 'Aluno 2', 'Aluno 3', 'Aluno 4', 'Aluno 5'];
+    $scope.alunos = ['Meweni', 'Jandiaia'];
 
     $scope.finalizar = function(){
         $scope.iniciado = false;
@@ -11,5 +11,9 @@ angular.module('minhaApp').controller('primeiroController', function($scope){
 
     $scope.iniciar = function(){
         $scope.iniciado = true;
+    };
+
+    $scope.submeter = function(){
+        $scope.alunos.push($scope.nome_aluno);
     };
 });
