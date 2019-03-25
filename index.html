@@ -10,8 +10,8 @@ Informações adicionais:
 <html>
 
 <head>
-   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSl4yxL94THfwv2Khy501SzeeDv82YyCAf3P1oMaqNDNJuxGJZ ">
-   <title>Curso do TimEzek</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSl4yxL94THfwv2Khy501SzeeDv82YyCAf3P1oMaqNDNJuxGJZ ">
+    <title>Curso do TimEzek</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -53,10 +53,10 @@ Informações adicionais:
                 <tr>
                     <th>
                         Nome
-                       <button ng-click="ordenarPorNome()">Ordernar Por Nome</button>
-                       
+                        <button ng-click="ordenarPorNome()">Ordernar Por Nome</button>
+
                     </th>
-                     <th>
+                    <th>
                         Idade
                         <button ng-click="ordenarPorIdade()">Ordernar Por Idade</button>
                     </th>
@@ -65,7 +65,7 @@ Informações adicionais:
                     <td>
                         {{aluno.nome}}
                     </td>
-                     <td>
+                    <td>
                         {{aluno.idade}}
                     </td>
                 </tr>
@@ -75,31 +75,33 @@ Informações adicionais:
         <button ng-show="iniciado" ng-click="finalizar()" class="btn btn-danger">Finalizar</button>
         <button ng-hide="iniciado" ng-click="iniciar()" class="btn btn-success">Iniciar</button>
         <h3>Inscrição para o Curso</h3>
-        <form name="form_1">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group form-group-default">
-                        <label>Nome</label>
-                        <input class="form-control" type="text" id="nome_aluno" name="nome_aluno" ng-model="nome_aluno"
-                            ng-readonly="!iniciado" ng-minlength="3">
+        <div ng-controller="novaInscricaoController" class="well">
+            <form name="form_1">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group form-group-default">
+                            <label>Nome</label>
+                            <input class="form-control" type="text" id="nome_aluno" name="nome_aluno" ng-model="nome_aluno"
+                                ng-minlength="3">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group form-group-default">
+                            <label>Idade</label>
+                            <input class="form-control" type="number" id="idade_aluno" ng-model="idade_aluno">
+                        </div>
                     </div>
                 </div>
-                 <div class="col-md-4">
-                    <div class="form-group form-group-default">
-                        <label>Idade</label>
-                        <input class="form-control" type="number" id="idade_aluno" ng-model="idade_aluno"
-                            ng-readonly="!iniciado">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button ng-click="submeter()" class="btn btn-success" ng-disabled="!iniciado">
+                            Envie!
+                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button ng-click="submeter()" class="btn btn-success" ng-disabled="!iniciado">
-                        Envie!
-                    </button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </div>
     <div class="well" ng-controller="previsaoTempoController">
         <h3>Previsao do Tempo</h3>
@@ -119,7 +121,9 @@ Informações adicionais:
     <script type="text/javascript" src="assets/js/libs/ngResource.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/primeiroController.js"></script>
-     <script type="text/javascript" src="assets/js/previsaoTempoController.js"></script>
+    <script type="text/javascript" src="assets/js/previsaoTempoController.js"></script>
+    <script type="text/javascript" src="assets/js/alunosCollectionService.js"></script>
+    <script type="text/javascript" src="assets/js/novaInscricaoController.js"></script>
 </body>
 
 </html>
