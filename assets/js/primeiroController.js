@@ -3,7 +3,7 @@ angular.module('minhaApp').controller('primeiroController', function($scope){
     var nome = "ashuashu";
 
     $scope.iniciado = true;
-    $scope.alunos = ['Meweni', 'Jandiaia'];
+    $scope.alunos = ['Aluno 1', 'Aluno 2'];
 
     $scope.finalizar = function(){
         $scope.iniciado = false;
@@ -14,6 +14,11 @@ angular.module('minhaApp').controller('primeiroController', function($scope){
     };
 
     $scope.submeter = function(){
-        $scope.alunos.push($scope.nome_aluno);
+        if($scope.form_1.$valid){
+            $scope.alunos.push($scope.nome_aluno);
+        }else{
+            alert("Prencha o nome corretamente! (Com mais de 3 caracteres!)");
+        }
+        
     };
 });
