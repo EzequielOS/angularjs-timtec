@@ -5,7 +5,7 @@ angular.module('minhaApp').controller('previsaoTempoController', function ($scop
             $scope.tempo = response;
             console.log(response);
         }, function () {
-            alert("Erro ao requisitar!");
+            alert("Erro ao requisitar o clima!");
         })
     }
     getWeather();
