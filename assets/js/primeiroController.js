@@ -6,6 +6,8 @@ angular.module('minhaApp').controller('primeiroController', function ($scope, $f
 
     $scope.iniciado = true;
 
+    $scope.cadastrar = false;
+
     $scope.alunos = alunosCollectionService.getAlunos();
 
     $scope.finalizar = function () {
@@ -25,5 +27,9 @@ angular.module('minhaApp').controller('primeiroController', function ($scope, $f
      $scope.ordenarPorIdade = function () {
      alunosCollectionService.ordenarPorIdade();
         $scope.alunos = alunosCollectionService.getAlunos();
+    };
+
+    $scope.exibeCadastro = function () {
+        $scope.cadastrar = !$scope.cadastrar;
     };
 });

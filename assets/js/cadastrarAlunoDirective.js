@@ -1,4 +1,4 @@
-angular.module("aplicacao").directive('cadastrarAlunos', function(){
+angular.module("minhaApp").directive('cadastrarAlunos', function(){
     return{
         restrict: 'E',
         templateUrl: 'views/cadastraAlunoTemplate.html'

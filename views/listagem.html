@@ -70,6 +70,16 @@ Informacoes adicionais:
         <br>
         <button ng-show="iniciado" ng-click="finalizar()" class="btn btn-danger">Finalizar</button>
         <button ng-hide="iniciado" ng-click="iniciar()" class="btn btn-success">Iniciar</button>
+        <br><br>
+        <button ng-click="exibeCadastro()" class="btn btn-warning">
+            <span ng-hide="cadastrar">Cadastrar</span>
+            <span ng-show="cadastrar">Ocultar</span>
+        </button>
+        <div class="panel panel-primary" ng-if="cadastrar">
+            <div class="panel-body">
+                <cadastrar-alunos></cadastrar-alunos>
+            </div>
+        </div>
     </div>
 </body>
 
